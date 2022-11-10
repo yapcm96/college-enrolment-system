@@ -6,6 +6,8 @@ require_relative 'course_collection.rb'
 class Register
   def initialize
     @current_students = []
+    @total_enrolled = 0
+    @total_rejected = 0
   end
 
   def enrol(student)
@@ -22,6 +24,7 @@ class Register
     rescue ValidationError => e
       # Student with invalid student details who cannot be enrolled is displayed and program continues
       puts "Student ID '#{student.student_id}' failed to be enrolled: #{e}"
+      @total_rejected += 1
     end
   end
 
@@ -37,6 +40,7 @@ class Register
       course_collection.course_instances.each do |course_instance|
         if current_student.course_id == course_instance.identifier
           course_instance.add_count
+          @total_enrolled += 1
         end
       end
     end
@@ -44,6 +48,8 @@ class Register
     course_collection.course_instances.each do |course_instance|
       puts "Number of students enrolled in #{course_instance.name} course: #{course_instance.count}"
     end
+    puts "Total students enrolled: #{@total_enrolled}"
+    puts "Total students rejected: #{@total_rejected}"
   end
 end
 
