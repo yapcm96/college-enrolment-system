@@ -30,12 +30,6 @@ class Register
   end
 
   def generate_report
-    # @biology = Biology.new
-    # @chemistry = Chemistry.new
-    # @computer_science = ComputerScience.new
-    # @mathematics = Mathematics.new
-    # @physics = Physics.new
-
     course_collection = CourseCollection.new
     course_collection.populate_collection_from_json('./lib/assets/course_mapping.json')
 
@@ -50,26 +44,6 @@ class Register
     course_collection.course_instances.each do |course_instance|
       puts "Number of students enrolled in #{course_instance.name} course: #{course_instance.count}"
     end
-    #
-    # @current_students.each do |current_student|
-    #   case current_student.course_id
-    #   when 'BIO'
-    #     @biology.add_count
-    #   when 'CHE'
-    #     @chemistry.add_count
-    #   when 'CSC'
-    #     @computer_science.add_count
-    #   when 'MTH'
-    #     @mathematics.add_count
-    #   when 'PHY'
-    #     @physics.add_count
-    #   end
-    # end
-    #
-    # course_instances = [@biology, @chemistry, @computer_science, @mathematics, @physics]
-    # course_instances.each do |course_instance|
-    #   puts "Number of students enrolled in #{course_instance.name} course: #{course_instance.count}"
-    # end
   end
 end
 
