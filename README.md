@@ -12,7 +12,8 @@ To run this project, run the following commands in the terminal:
 2. `ruby app.rb` to run the app and see the enrolment process.
 
 Dataset of new students containing details for enrolment is located in
-`college-enrolment-system/lib/asset/new_students_dataset.csv`.
+`college-enrolment-system/lib/asset/new_students_dataset.csv`. Therefore, new student details can be added in here by 
+following the CSV format.
 
 ## What happens when the enrolment process is run
 
@@ -24,4 +25,4 @@ error for the unsuccessful enrolment.
 Once the enrolment process is complete, a summary of the number of students enrolled in all courses will be displayed.
 
 This project allows new courses to be added to the available list. This can be done by adding to the `course_mapping.json`
-in the `college-enrolment-system/lib/assets` directory
+in the `college-enrolment-system/lib/assets/` directory.
