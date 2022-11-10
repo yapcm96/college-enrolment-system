@@ -1,0 +1,13 @@
+student_id,first_names,last_name,course_id
+HJP1234,Harry James,Potter,CHE
+CMY1234,Choon Meng,Yap,CSC
+JWD1234,John William,Doe,CSC
+BJS1235,Bart Jojo,Simpson,MTH
+PIO1233,Not,Student,MTH
+WWW1233,Not,Course,MMM
+ZZZ1233,99Astro,Denton,BIO
+,First,Last,MTH
+ABC1234,,Last,BIO
+ABC1235,First,,CSC
+ABC1235,First,Last,
+,,,
